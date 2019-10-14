@@ -1,2 +1,2 @@
-ls -R a* *z z**a!
+ls -R z**a! *z a* 
 
