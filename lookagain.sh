@@ -1,1 +1,2 @@
-ls *.sh
+ls *.sh | tr -d ".ch"
+
