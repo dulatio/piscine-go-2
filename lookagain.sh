@@ -1,3 +1,3 @@
-ls *.sh -R -r | cut -d. -f1
+find -iname "*.sh"  -printf "%f\n" | cut -d. -f1
 
 
