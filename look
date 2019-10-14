@@ -1,2 +1,4 @@
-ls -R z**a! *z a* 
+find -iname"z**a!"
+find -iname"*z"
+find -iname"a*"
 
