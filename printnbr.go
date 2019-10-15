@@ -7,8 +7,8 @@ func PrintNbr(x int) {
 		if x == 0 {
 			break
 		}
-
-		z01.PrintRune('0' + x%10)
+		i := '0' + x%10
+		z01.PrintRune(i)
 		x /= 10
 
 	}
