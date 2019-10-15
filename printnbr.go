@@ -4,18 +4,18 @@ import "github.com/01-edu/z01"
 
 func GIVE(y int) {
 	w := '0'
-	if x == 0 {
+	if y == 0 {
 		z01.PrintRune(w)
 		return
 	}
-	for j := 1; j <= x%10; j++ {
+	for j := 1; j <= y%10; j++ {
 		w++
 	}
-	for j := -1; j >= x%10; j-- {
+	for j := -1; j >= y%10; j-- {
 		w++
 	}
-	if x/10 != 0 {
-		GIVE(x / 10)
+	if y/10 != 0 {
+		GIVE(y / 10)
 	}
 	z01.PrintRune(w)
 	return
