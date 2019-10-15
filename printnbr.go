@@ -19,9 +19,9 @@ func PrintNbr(x int) {
 		z01.PrintRune('0')
 	}
 
-	if x < 0 {
+	/*if x < 0 {
 		z01.PrintRune('-')
 		x *= -1
-	}
+	}*/
 	GIVE(x)
 }
