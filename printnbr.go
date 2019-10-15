@@ -16,10 +16,11 @@ func PrintNbr(x int) {
 		}
 
 		i := '0'
-		i += (x % 10)
+		for j := 1; j <= x%10; j++ {
+			i++
+		}
 		z01.PrintRune(i)
 		x /= 10
-
 	}
 	z01.PrintRune('\n')
 }
