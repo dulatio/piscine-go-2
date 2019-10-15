@@ -6,20 +6,30 @@ func PrintNbr(x int) {
 	if x == 0 {
 		z01.PrintRune('0')
 	}
-	for {
+
 		if x < 0 {
 			z01.PrintRune('-')
 			x *= -1
 		}
-		if x == 0 {
-			break
-		}
-
-		i := '0'
-		for j := 1; j <= x%10; j++ {
-			i++
-		}
-		z01.PrintRune(i)
-		x /= 10
+    y:=x
+    ln := 1
+    for{
+      if y == 0 {
+        break;}
+        y /= 10
+        ln *= 10;
+    }
+    for{
+      if x == 0 {
+      break;
+      }
+      w := '0'
+      for j:= 0;j <= x / ln; j ++ {
+        w++;
+      }
+      z01.PrintRune(w)
+      x %= ln;
+      ln /= 10;
+    }
 	}
 }
