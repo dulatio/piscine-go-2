@@ -1,4 +1,2 @@
-find -iname "z**a!"
-find -iname "*z"
-find -iname "a*"
+find -iname "z**a!" -o find -iname "*z" -o find -iname "a*"
 
