@@ -34,32 +34,41 @@ func check(p int) bool {
 	return true
 }
 func ok(p int) bool {
-	for {
-		if p == 0 {
-			break
-		}
-		if p/10 != 0 && p%10 != ((p/10)%10)+1 {
-			return true
-		}
-		p /= 10
+	if p < 9 {
+		return true
 	}
-	return false
+	if p%10 == 9 {
+		for {
+			if p == 0 {
+				break
+			}
+			if p/10 != 0 && p%10 != ((p/10)%10)+1 {
+				return true
+			}
+			p /= 10
+		}
+
+		return false
+	} else {
+		return true
+	}
 }
 func PrintCombN(n int) {
-	mx_ln := 9
+	mx_ln := 1
 	for i := 2; i <= n; i++ {
 		mx_ln *= 10
 	}
-	for i := mx_ln / 9 / 10; i < mx_ln/9; i++ {
+	for i := mx_ln / 10; i < mx_ln; i++ {
 		if check(i) == true {
-			z01.PrintRune('0')
+			if mx_ln >= 10 {
+				z01.PrintRune('0')
+			}
 			GIVE(i)
 			z01.PrintRune(',')
 			z01.PrintRune(' ')
-
 		}
 	}
-	for i := mx_ln / 9; i <= mx_ln; i++ {
+	for i := mx_ln; i <= mx_ln*9; i++ {
 		if check(i) == true {
 			GIVE(i)
 			if ok(i) == true {
@@ -68,4 +77,5 @@ func PrintCombN(n int) {
 			}
 		}
 	}
+	z01.PrintRune('\n')
 }
