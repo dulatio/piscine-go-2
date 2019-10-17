@@ -2,7 +2,7 @@ package basicatoi
 
 func BasicAtoi(str string) int {
 	ok := false
-	x := 0
+	var x int
 	for _, c := range str {
 		if c != 48 {
 			ok = true
@@ -10,7 +10,7 @@ func BasicAtoi(str string) int {
 		if ok == false {
 			continue
 		}
-		cnt := 0
+		var cnt int
 		for i := '1'; i <= c; i++ {
 			cnt++
 		}
