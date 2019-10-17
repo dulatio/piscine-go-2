@@ -1,2 +1,0 @@
-find -iname "z**a!" -o -iname "*z" -o -iname "a*"
-
