@@ -1,5 +1,11 @@
 package basicatoi
 
+package main
+
+import (
+	"fmt"
+)
+
 func get(x int) int {
 	switch x {
 	case 0:
@@ -46,10 +52,10 @@ func get(x int) int {
 }
 func BasicAtoi(str string) int {
 	ok := false
-	x := 9223372036854775807
+	x := 0
 	ln := 0
 	for _, c := range str {
-		if c == c {
+		if c != 0 {
 			ln++
 		}
 	}
@@ -76,3 +82,4 @@ func BasicAtoi(str string) int {
 	}
 	return x
 }
+
