@@ -1,7 +1,5 @@
 package basicatoi
 
-import "fmt"
-
 func get(x int) int {
 	switch x {
 	case 0:
@@ -46,8 +44,6 @@ func get(x int) int {
 	}
 	return -1
 }
-
-//func Do()
 func BasicAtoi(str string) int {
 	ok := false
 	x := 9223372036854775807
@@ -71,22 +67,12 @@ func BasicAtoi(str string) int {
 			cnt++
 		}
 
-		fmt.Print(ln)
-		fmt.Print(" > ")
 		if cur_ln == 1 {
 			x = cnt * get(ln-cur_ln)
 		} else {
 			x = x + cnt*get(ln-cur_ln)
 		}
-		fmt.Println(cur_ln)
-		/*
-			if c != rune(str[ln-1]) {
-				fmt.Print(x)
-				fmt.Print(" > ")
-				x = x % 1000000000000000000 * 10
-				fmt.Println(x)
-			}*/
+
 	}
-	//return 9223372036854775807 - x
 	return x
 }
