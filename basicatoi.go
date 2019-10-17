@@ -4,13 +4,17 @@ func BasicAtoi(str string) int {
 	ok := false
 	x := 0
 	for _, c := range str {
-		if c != '0' {
+		if c != 48 {
 			ok = true
 		}
 		if ok == false {
 			continue
 		}
-		x += int(c - '0')
+		cnt := 0
+		for i := '0'; i <= c; i++ {
+			cnt++
+		}
+		x += cnt
 		x *= 10
 	}
 	x /= 10
