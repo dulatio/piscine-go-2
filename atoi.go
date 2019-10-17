@@ -14,17 +14,19 @@ func Atoi(str string) int {
 	var this string
 	ok := true
 	change := false
+	second := false
 	for _, c := range str {
 		if c != '+' && c != '-' {
 			ok = false
 		}
 		if ok == true {
+			if second == true {
+				return 0
+			}
 			if c == '-' {
 				change = true
 			}
-			if c == '+' {
-				change = false
-			}
+			second = true
 		} else {
 			this = this + string(c)
 		}
