@@ -11,7 +11,7 @@ func BasicAtoi(str string) int {
 			continue
 		}
 		cnt := 0
-		for i := '0'; i <= c; i++ {
+		for i := '1'; i <= c; i++ {
 			cnt++
 		}
 		x += cnt
