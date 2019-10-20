@@ -2,6 +2,10 @@ package isnegative
 
 import "github.com/01-edu/z01"
 
+var ans [9]rune
+var ban [9]bool
+var ans2 [9]int
+
 func EightQueens() {
 	ok := true
 	cnt := 0
