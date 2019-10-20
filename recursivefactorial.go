@@ -1,7 +1,7 @@
 package recursivefactorial
 
 func RecursiveFactorial(x int) int {
-	if x < 0 || x > 20{
+	if x < 0 || x > 20 {
 		return 0
 	}
 	if x == 0 {
